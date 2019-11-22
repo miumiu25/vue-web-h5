@@ -1,0 +1,95 @@
+
+//colors
+$colors:("primary":rgb(43, 104, 226),
+  "red":#D62823,
+  "black":#101E,
+  "dark":#333,
+  "grey":#666,
+  "light":#999,
+  "white":#fff,
+);
+
+
+//font-size
+$base-font-size:1rem;
+$font-sizes:(xxs:0.5625, //9px
+  xs:0.75, //12px
+  sm:0.875, //14px
+  md:1, //16px
+  lg:1.125 //18px
+);
+
+
+
+
+//justify-content
+$flex-jc:(start:flex-start,
+  end:flex-end,
+  center:center,
+  between:space-between,
+  around:space-around);
+
+
+//align-items
+$flex-ai:(start:flex-start,
+  end:flex-end,
+  center:center,
+  stretch:stretch);
+
+
+
+//常用边距定义
+//spacing
+$spacing-types:(m:margin, p:padding);
+$spacing-directions:(t:top, r:right, b:bottom, l:left);
+$spacing-base-size:1rem;
+$spacing-sizes:(0:0, 1:0.25, 2:0.5, 3:1, 4:1.5, 5:2);
+
+
+/*设计图width*/
+$screenwidth:375;
+
+/*rem 份数*/
+$remSize:18.75;
+
+/* 375/18.75 =20px=1rem */
+
+/*html rem比例*/
+//$rem:($screenwidth/$remSize);
+
+$rem:20;
+
+
+
+$font-family:"Helvetica Neue",
+"Helvetica",
+"sans-serif" !default;
+
+$font-size:.8rem !default;
+$font-color:#333;
+$line-height: 1.5;
+$body-bg:#f7f8fa;//
+$color-white: #fff;//
+$color-df: rgb(48,95,229);//
+$color-icon: #e68131;//
+$color-assist: #999;//
+
+$text-df:#333;//
+$text-primary: darken(#333, 6.5%) !default; 
+$text-success: #333 !default;
+$text-info: #666 !default;//
+$text-warning: #33dd43 !default;
+$text-danger: #e68131 !default;
+$text-placeholder: rgb(204,204,204);
+
+
+$bg-white: #fff;//
+$bg-df: rgb(43,104,226);
+$bg-input: #eeecec;
+
+$line: #f2f2f2;//
+$line-blod: #ddd;
+
+
+
+

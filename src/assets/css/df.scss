@@ -1,0 +1,370 @@
+
+@import "./var.scss";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+
+body {
+    font-size: $font-size;
+    line-height: $line-height;
+    font-family: $font-family;
+    background: $body-bg;
+	// color:$font-color;
+}
+
+.container, .ctr {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+img {
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+}
+
+// ios webkit overflow scroll
+.srltouch {
+    -webkit-overflow-scrolling: touch;
+}
+/* a link*/
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+
+a:link {
+    color: $text-primary;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: darken( $text-primary,10%);
+	-webkit-tap-highlight-color: transparent;
+}
+
+/* float*/
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/*clearfix*/
+.cfx:before,
+.cfx:after,
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: "";
+}
+
+.clearfix:after,
+.cfx:after{
+    clear: both;
+}
+
+.bfc {
+    overflow: hidden;
+}
+
+.clip {
+    position: absolute;
+    clip: rect(0 0 0 0);
+}
+
+/* 输入框focus焦点*/
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+    outline: none !important;
+}
+
+
+// table
+.table-fixed {
+    table-layout: fixed;
+}
+
+.table-auto {
+    table-layout: auto;
+}
+
+
+/*定位position*/
+
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.fixed {
+    position: fixed;
+}
+
+
+// hidden
+.overflow-y {
+    overflow-y: hidden;
+}
+
+.overflow-x {
+    overflow-y: hidden;
+}
+
+.d-hide {
+    display: none;
+}
+
+.v-hide{
+    position:absolute;
+    visibility:hidden;
+}
+
+.hide-text-indent {
+    position: absolute !important;
+    display: inline-block !important;
+    text-indent: -99999px;
+    margin: -1px !important;
+    padding: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    outline: none !important;
+}
+
+
+/* placeholder */
+/*webkit*/
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: $text-placeholder !important;
+}
+
+/*IE10+*/
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: $text-placeholder !important;
+}
+
+/*Firefox4-18*/
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: $text-placeholder !important;
+}
+
+/*Firefox19+*/
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: $text-placeholder !important;
+}
+
+/* placeholder 兼容ie7,8,9 */
+input.ie-focus,
+textarea.ie-focus {
+    color: $text-placeholder !important;
+}
+
+
+/*ellipsis*/
+.elp-no {
+    white-space: normal;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.elp {
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.elp-1 {
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal !important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    word-break: break-all;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.elp-2 {
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal !important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    word-break: break-all;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.elp-3 {
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal !important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    word-break: break-all;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.elp-4 {
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal !important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    word-break: break-all;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+
+
+/*h1~h6*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+
+//生成文字颜色和背景颜色
+@each $colorKey,
+$color in $colors {
+  .text-#{$colorKey} {
+    color: $color;
+  }
+
+  .bg-#{$colorKey} {
+    background-color: $color;
+  }
+}
+
+//text-align
+@each $var in (left, center, right) {
+  .text-#{$var} {
+    text-align: $var;
+  }
+}
+
+
+@each $sizeKey,
+$size in $font-sizes {
+  .fs-#{$sizeKey} {
+    font-size: $size * $base-font-size;
+  }
+}
+
+//justify-content
+
+
+@each $key,
+$value in $flex-jc {
+  .jc-#{$key} {
+    justify-content: $value;
+  }
+}
+
+//align-items
+
+
+@each $key,
+$value in $flex-jc {
+  .ai-#{$key} {
+    align-items: $value;
+  }
+}
+
+//常用边距定义
+//spacing
+
+@each $typeKey,$type in $spacing-types {
+
+  //m-1
+  @each $sizeKey,$size in $spacing-sizes {
+    .#{$typeKey}-#{$sizeKey} {
+      #{$type}: $size * $spacing-base-size
+    }
+  }
+
+  //mx-1
+  @each $sizeKey,$size in $spacing-sizes {
+    .#{$typeKey}x-#{$sizeKey} {
+      #{$type}-left: $size * $spacing-base-size;
+      #{$type}-right: $size * $spacing-base-size
+    }
+    .#{$typeKey}y-#{$sizeKey} {
+      #{$type}-top: $size * $spacing-base-size;
+      #{$type}-bottom: $size * $spacing-base-size
+    }
+  }
+
+  //mt-1
+  @each $directionKey,$direction in $spacing-directions {
+    @each $sizeKey,$size in $spacing-sizes {
+      .#{$typeKey}#{$directionKey}-#{$sizeKey} {
+        #{$type}-#{$direction}: $size * $spacing-base-size
+      }
+    }
+  }
+}
+//flex
+.d-flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+//width
+.w-100{
+  width:100%;
+}
+.h-100{
+  height: 100%;
+}
+li{
+  list-style: none;
+}
+
