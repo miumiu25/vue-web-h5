@@ -61,18 +61,29 @@ $rem:20;
 
 
 
-$font-family:"Helvetica Neue",
-"Helvetica",
-"sans-serif" !default;
-
+$font-family:PingFang-SC;
 $font-size:.8rem !default;
 $font-color:#333;
 $line-height: 1.5;
-$body-bg:#f7f8fa;//
-$color-white: #fff;//
-$color-df: rgb(48,95,229);//
-$color-icon: #e68131;//
-$color-assist: #999;//
+$body-bg:#fff;//
+
+$color-df:#060606;
+$color-red:#F71A2A;
+$color-black:#333;
+$color-dark:#666;
+$color-grey:#999;
+$color-light:#f2f2f2;
+$color-white:#fff;
+
+$bg-df:rgb(48,95,229);
+$bg-white:#fff;
+$bg-black:#333;
+$bg-dark:#666;
+$bg-grey:#999;
+$bg-light:#f2f2f2;
+
+
+
 
 $text-df:#333;//
 $text-primary: darken(#333, 6.5%) !default; 
@@ -83,9 +94,7 @@ $text-danger: #e68131 !default;
 $text-placeholder: rgb(204,204,204);
 
 
-$bg-white: #fff;//
-$bg-df: rgb(43,104,226);
-$bg-input: #eeecec;
+
 
 $line: #f2f2f2;//
 $line-blod: #ddd;

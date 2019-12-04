@@ -13,10 +13,9 @@ module.exports = {
   css: {
     loaderOptions: {
       sass: {
-        data: `
-          @import "assets/css/base.scss";
-        `
+        prependData: `@import "~assets/css/base.scss";`,
       }
-    }
-  }
+    }  
+  },
+  
 }

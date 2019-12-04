@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-   <router-view></router-view>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -11,10 +11,15 @@ export default {
   name: 'app',
   components: {
    
-  }
+  },
+  created() {
+   
+  },
 }
 </script>
 
+
 <style lang="scss">
-  @import "./assets/css/base.scss";
+ @import "./assets/css/base.scss";
 </style>
+

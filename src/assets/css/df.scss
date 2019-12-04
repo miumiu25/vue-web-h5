@@ -9,6 +9,7 @@
 }
 
 body {
+    margin: 0;
     font-size: $font-size;
     line-height: $line-height;
     font-family: $font-family;
@@ -46,13 +47,13 @@ a:active {
 
 
 a:link {
-    color: $text-primary;
+    color: $text-df;
 }
 
 a:hover,
 a:focus,
 a:active {
-    color: darken( $text-primary,10%);
+    color: darken( $color-df,10%);
 	-webkit-tap-highlight-color: transparent;
 }
 
